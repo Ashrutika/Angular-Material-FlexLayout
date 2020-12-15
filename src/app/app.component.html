@@ -1,0 +1,58 @@
+
+ <!-- <div fxLayout="row" fxLayoutGap="10%" fxLayoutAlign="center start" style="border:1px solid black;height:200px;">
+  <div fxFlexOrder="4" style="background-color: aqua;">1. One</div>
+  <div fxFlexOrder="2" style="background-color:blueviolet;">2. Two</div>
+  <div fxFlexOrder="3" style="background-color: yellow;">3. Three</div>
+  <div fxFlexOrder="1" style="background-color: burlywood;">4. Four</div>
+</div> -->
+
+ <!-- <div fxLayout="column" class="all">
+  <div fxFlexOffset="10%">1. One</div>
+  <div fxFlexOffset="5%">2. Two</div>
+  <div fxFlexOffset="15">3. Three</div>
+  <div fxFlexOffset="40%">4. Four</div>
+</div> -->
+<div class="align-ex" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="50px">
+  <div>1</div>
+  <div>2</div>
+</div>
+
+<div fxShow.sm="false" fxShow.gt-md="false">
+  <div class="item1" fxFlex>1</div>
+</div>
+
+<div
+   ngClass="first" 
+   ngClass.xs="third"
+   [ngClass.sm]="{'first':false, 'second':true}"
+  >
+      FlexLayout
+</div>
+
+
+
+<!-- new................. -->
+<div fxLayout="column" fxLayoutGap="0.5em" class="container">
+<div class="header" fxFlex="0 0 15%" fxFlex.lt-sm="0 0 25%" fxLayout="row" fxLayoutGap="0.5em" fxLayout.lt-sm="column">
+  <div class="logo" fxFlex="0 0 10%" fxHide.lt-sm></div>
+<div class="title" fxFlex fxFlex.lt-sm="0 0 50%"></div>
+<mat-list role="list" fxLayout="row" fxLayoutGap="0.1em" fxFlexAlign="end" fxFlexAlign.lt-sm="center" fxHide.lt-xs>
+  <mat-list-item role="listitem">Home</mat-list-item>
+  <mat-list-item role="listitem">About</mat-list-item>
+  <mat-list-item role="listitem">Login</mat-list-item>
+  <mat-list-item role="listitem">Signup</mat-list-item>
+</mat-list>
+</div>
+
+<div class="main" fxLayout="row" fxLayoutGap="0.5em" fxFlex>
+<div class="sidenav" fxHide.lt-sm fxFlex="0 0 15%"></div>
+<div class="main-content" fxLayout="row wrap" fxLayoutAlign="space-evenly center" fxFlex>
+  <mat-card fxFlex="0 0 100px" *ngFor="let i of [1,2,3,4,5,6]">Card {{i}}</mat-card>
+</div>
+
+</div>
+<div class="footer" fxFlex="0 0 15%" fxFlex.lt-sm="0 0 10%">
+
+</div>
+
+</div>
